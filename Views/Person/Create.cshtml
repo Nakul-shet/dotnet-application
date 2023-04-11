@@ -1,0 +1,27 @@
+﻿@model coreMvcArcProject.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+    <h2>Add New Person</h2>
+
+    <form asp-action="Create" method="post">
+        <input asp-for="Id" placeholder="Enter Id"/>
+        <input asp-for="Name" placeholder="Enter Name"/>
+        <input asp-for="Age" placeholder="Enter Age"/>
+        <input asp-for="City" placeholder="Enter City"/>
+
+        <input type="submit" value="Create"/>
+    </form>
+</body>
+</html>

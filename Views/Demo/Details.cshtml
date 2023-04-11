@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h2>Detials Page</h2>
+    <p>@ViewData["Message"]</p>
+
+    <ul>
+        @foreach (var item in ViewData["Names"] as string[])
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <h4>Total Persons : @ViewData["TotalPersons"]</h4>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewData["PersonList"] as IList<Person>)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Age</td>
+                    <td>@item.City</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

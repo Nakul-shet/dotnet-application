@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <p>@TempData["name"]</p>
+
+    <p><a asp-controller="Demo" asp-action="About">Click here</a>to get about</p>
+</body>
+</html>
+
+@{
+    //TempData.Keep();
+    TempData.Keep("name");
+}
